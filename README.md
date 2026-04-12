@@ -1,0 +1,1 @@
+this will be the BACKEND of MY SNappy Platform , It will handle Very COmplex Backend Arciteture , Platform WIll be AGentic Fusion Task based along with MCP Server Integration , 
