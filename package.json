@@ -1,0 +1,32 @@
+{
+  "name": "backend-snappy",
+  "version": "1.0.0",
+  "description": "this will be the BACKEND of MY SNappy Platform , It will handle Very COmplex Backend Arciteture , Platform WIll be AGentic Fusion Task based along with MCP Server Integration ,",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nayaknishant656/backend-snappy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/nayaknishant656/backend-snappy/issues"
+  },
+  "homepage": "https://github.com/nayaknishant656/backend-snappy#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.7.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
