@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import connectDB from './config/db.js';
 import healthRoutes from './routes/health.routes.js';
+import collegeRoutes from './routes/Collegedetails.js';
 
 // Load environment variables
 dotenv.config();
@@ -49,6 +50,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 // Routes
 app.use('/api/health', healthRoutes);
+app.use('/api/colleges', collegeRoutes);
 
 // Root greeting route
 app.get('/', (req, res) => {
