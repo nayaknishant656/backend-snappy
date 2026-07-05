@@ -50,7 +50,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 // Routes
 app.use('/api/health', healthRoutes);
-app.use('/api/colleges', collegeRoutes);
+app.use('/api/ci', collegeRoutes);
 
 // Root greeting route
 app.get('/', (req, res) => {
