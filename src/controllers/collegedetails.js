@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import College from '../models/College.js';
+import Collegeinfo from '../models/Collegeinfo.js'
 
 // @desc   Fetch all colleges from SnappyPoornima DB
 // @route  GET /api/colleges
@@ -22,6 +23,23 @@ export const getCollegeList = async (req, res) => {
         });
     }
 };
+
+export const getCollegeinfo = async (req, res) => {
+    try {
+        const collegeinfo = await Collegeinfo.find({})
+
+        return res.status(200).json({
+            success: true,
+            data: collegeinfo
+        })
+    } catch (error) {
+        return res.status(500).json({
+            success: false,
+            message: 'Failed to receive data from the database.',
+            error: error.message,
+        });
+    }
+}
 
 // @desc   Fetch a single college by MongoDB _id
 // @route  GET /api/colleges/:id
