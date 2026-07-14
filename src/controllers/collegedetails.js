@@ -62,7 +62,7 @@ export const getCollegeById = async (req, res) => {
             });
         }
 
-        const college = await College.findById(req.params.id);
+        const college = await Collegeinfo.findById(req.params.id);
 
         if (!college) {
             return res.status(404).json({
