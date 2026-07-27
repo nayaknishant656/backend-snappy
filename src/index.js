@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import connectDB from './config/db.js';
 import healthRoutes from './routes/health.routes.js';
 import collegeRoutes from './routes/Collegedetails.js';
+import resourcesRoutes from './routes/Resources.js';
 
 // Load environment variables
 dotenv.config();
@@ -51,6 +52,7 @@ if (process.env.NODE_ENV !== 'production') {
 // Routes
 app.use('/api/health', healthRoutes);
 app.use('/api/ci', collegeRoutes);
+app.use('/api/resources', resourcesRoutes);
 
 // Root greeting route
 app.get('/', (req, res) => {
