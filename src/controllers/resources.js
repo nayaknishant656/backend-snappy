@@ -23,7 +23,7 @@ export const getProduct = async (req, res) => {
             React.createElement(Product, { product })
         );
 
-        return res.status(200).send(html);
+        return res.status(200).json({ html, product });
     } catch (error) {
         return res.status(500).send(error.message);
     }
