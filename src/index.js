@@ -5,6 +5,7 @@ import connectDB from './config/db.js';
 import healthRoutes from './routes/health.routes.js';
 import collegeRoutes from './routes/Collegedetails.js';
 import resourcesRoutes from './routes/Resources.js';
+import connectionsRoutes from './routes/connection.js';
 
 // Load environment variables
 dotenv.config();
