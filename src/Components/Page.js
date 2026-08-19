@@ -5,7 +5,7 @@ export default function Page({ product }) {
         "div",
         null,
         React.createElement("h2", null, product.name),
-        React.createElement("p", null, product.description),
+        React.createElement("p", null, product.Description),
         React.createElement("p", null, 'this is the page only')
     );
 }
