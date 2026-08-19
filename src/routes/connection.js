@@ -3,6 +3,7 @@ import { getAllConnections } from '../controllers/connection.js';
 
 const router = express.Router();
 
-router.get('/connections', getAllConnections);
+router.get('/conn/:id', getAllConnections);
+
 
 export default router;
