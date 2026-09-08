@@ -1,8 +1,10 @@
 import mongoose from 'mongoose';
 import React from "react";
 import ReactDOMServer from "react-dom/server";
-import Connection from '../models/connection.js'
+import Connection from '../models/connection.js';
 import Page from ".././Components/page.js";
+import { renderToStaticMarkup } from "react-dom/server";
+import Connectionmap from "../Components/Connectionmap.js";
 export const getAllConnections = async (req, res) => {
     try {
         const { id } = req.params;
@@ -23,5 +25,34 @@ export const getAllConnections = async (req, res) => {
         return res.status(200).type("html").send(html);
     } catch (error) {
         return res.status(500).send(error.message);
+    }
+};
+
+export const getConnectionmmap = async (req, res) => {
+    try {
+
+        const products = await Connection.find({}).lean();
+
+        const component = React.createElement(
+            Connectionmap,
+            {
+                products: products,
+            }
+        );
+
+        const html = renderToStaticMarkup(component);
+
+        return res
+            .status(200)
+            .type("html")
+            .send(html);
+
+    } catch (error) {
+
+        return res.status(500).json({
+            success: false,
+            message: "Failed to generate HTML page.",
+            error: error.message,
+        });
     }
 };
