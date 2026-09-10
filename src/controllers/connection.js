@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 import React from "react";
 import ReactDOMServer from "react-dom/server";
 import Connection from '../models/connection.js';
-import Blog from '../models/connection.js';
+import Blog from '../models/connectionblog.js';
 import Page from ".././Components/page.js";
 import { renderToStaticMarkup } from "react-dom/server";
 import Connectionmap from "../Components/Connectionmap.js";
