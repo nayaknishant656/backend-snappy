@@ -46,8 +46,8 @@ app.use('/api/connections', connectionsRoutes);
 
 app.get('/', (req, res) => {
   res.json({
-    message: 'Welcome to the Snappy Platform API',
-    status: 'Server Started'
+    message: 'you are going to be 00.1% of the WOrld in software Engineer',
+    status: 'hii from nishant'
   });
 });
 
