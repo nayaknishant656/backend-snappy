@@ -1,5 +1,6 @@
 import 'dotenv/config';
 import express from 'express';
+import cors from 'cors';
 import connectDB from './config/db.js';
 import healthRoutes from './routes/health.routes.js';
 import collegeRoutes from './routes/Collegedetails.js';
@@ -9,6 +10,16 @@ import connectionsRoutes from './routes/connection.js';
 const PORT = process.env.PORT || 8000;
 
 const app = express();
+
+const corsOptions = {
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'Origin'],
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
