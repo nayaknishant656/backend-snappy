@@ -3,7 +3,7 @@ import React from "react";
 import ReactDOMServer from "react-dom/server";
 import College from '../models/College.js';
 import Collegeinfo from '../models/Collegeinfo.js'
-import Product from ".././Components/Product.js";
+import Product from "../Components/Product.js";
 
 export const getProduct = async (req, res) => {
     try {

@@ -6,7 +6,7 @@ import { fileURLToPath } from "url";
 import fs from "fs";
 import path from "path";
 import Blog from '../models/connectionblog.js';
-import Page from ".././Components/page.js";
+import Page from "../Components/Page.js";
 import { renderToStaticMarkup } from "react-dom/server";
 import Connectionmap from "../Components/Connectionmap.js";
 import Connblog from "../Components/Connblog.js";
