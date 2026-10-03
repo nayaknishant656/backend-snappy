@@ -32,7 +32,15 @@ export const getpostgres = async (req, res) => {
     try {
 
         const result = await sql`
-            SELECT * FROM "Resources";
+            SELECT
+                c.course_name,
+                qp.year,
+                qp.exam_type,
+                qp.file_url
+            FROM question_papers qp
+            JOIN courses c ON qp.course_id = c.course_id
+            WHERE c.course_name = 'Python Programming'
+            ORDER BY qp.year DESC;
         `;
 
         return res.status(200).json({
